@@ -1,14 +1,14 @@
 import React, {Component, Fragment} from 'react';
-import MyName from './MyName';
-import Counter from './Counter';
+// import MyName from './MyName';
+// import Counter from './Counter';
+import InputExample from './inputExample';
 import './App.css'
 
 class App extends Component{
   render(){
     return (
       <Fragment>
-        <MyName name="북가좌불기둥" />
-        <Counter />
+        <InputExample />
       </Fragment>
     );
   }
