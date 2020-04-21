@@ -1,14 +1,15 @@
 import React, {Component, Fragment} from 'react';
+import PracticeCounter from './practice/PracticeCounter';
 // import MyName from './MyName';
 // import Counter from './Counter';
-import InputExample from './inputExample';
+// import InputExample from './inputExample';
 import './App.css'
 
 class App extends Component{
   render(){
     return (
       <Fragment>
-        <InputExample />
+        <PracticeCounter />
       </Fragment>
     );
   }
