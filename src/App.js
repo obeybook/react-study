@@ -6,10 +6,14 @@ import InputExample from './inputExample';
 import './App.css'
 
 class App extends Component{
+  handleCreate = (data) => {
+    console.log(data)
+  }
+
   render(){
     return (
       <Fragment>
-        <InputExample />
+        <InputExample onCreate={this.handleCreate}/>
       </Fragment>
     );
   }
