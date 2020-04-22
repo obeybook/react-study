@@ -2,18 +2,19 @@ import React, {Component, Fragment} from 'react';
 // import PracticeCounter from './practice/PracticeCounter';
 // import MyName from './MyName';
 // import Counter from './Counter';
-import InputExample from './inputExample';
+// import InputExample from './inputExample';
+import PracticeInputExample from './practice/PracticeInputExample';
 import './App.css'
 
 class App extends Component{
-  handleCreate = (data) => {
-    console.log(data)
+  propsFnc = (info) => {
+    console.log(info)
   }
 
   render(){
     return (
       <Fragment>
-        <InputExample onCreate={this.handleCreate}/>
+        <PracticeInputExample onCreate={this.propsFnc}/>
       </Fragment>
     );
   }
