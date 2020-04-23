@@ -30,7 +30,7 @@ class inputExample extends Component{
                     이름 : {this.state.name}<br/>
                     전화번호 : {this.state.phone}
                 </div>
-                <button type="submit">dd</button>
+                <button type="submit">+</button>
             </form>
         )
     }

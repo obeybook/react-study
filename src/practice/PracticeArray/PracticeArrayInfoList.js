@@ -7,9 +7,9 @@ class PracticeArrayInfoList extends Component{
     }
 
     render(){
-        const { data } = this.props
+        const { data , onRemove , onUpdate} = this.props
         const list = data.map(
-            info => (<PracticeArrayInfo key={info.id} info={info} />)
+            info => (<PracticeArrayInfo key={info.id} info={info} remove={onRemove} update={onUpdate} />)
         )
         return(
             <div>{list}</div>
