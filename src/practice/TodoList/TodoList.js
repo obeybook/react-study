@@ -3,11 +3,14 @@ import TodoListInfo from './TodoInfo';
 
 class TodoList extends Component{
     render(){
-        console.log(this.props.contents[0].name)
+        const { data } = this.props;
+        const list = data.map(
+            info => <TodoListInfo id={info.key} name={info.name} />
+        )
         return(
             <div>
                 <ul>
-                    <TodoListInfo contents={this.props.contents[0].name}/>
+                    { list }
                 </ul>
             </div>
         )

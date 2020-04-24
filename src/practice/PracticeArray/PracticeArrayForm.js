@@ -22,6 +22,7 @@ class PracticeArrayForm extends Component{
     }
 
     render(){
+        console.log("asd")
         return(
             <form onSubmit={this.handleSubmit}>
                 <input type="text" placeholder="이름" value={this.state.name} onChange={this.inputChange} name="name"/>
