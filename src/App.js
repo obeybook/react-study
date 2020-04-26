@@ -1,19 +1,30 @@
 import React, {Component} from 'react';
+import Learn1 from './practice/learn1';
 // import PracticeCounter from './practice/PracticeCounter';
 // import MyName from './MyName';
 // import Counter from './Counter';
 // import InputExample from './inputExample';
 // import PracticeInputExample from './practice/PracticeInputExample';
 
-import TodoListHeader from './practice/TodoList/TodoListHeader';
-import TodoList from './practice/TodoList/TodoList';
-import TodoListInert from './practice/TodoList/TodoListInert';
+// import TodoListHeader from './practice/TodoList/TodoListHeader';
+// import TodoList from './practice/TodoList/TodoList';
+// import TodoListInert from './practice/TodoList/TodoListInert';
 
 // import PracticeArrayForm from './practice/PracticeArray/PracticeArrayForm';
 // import PracticeArrayInfoList from './practice/PracticeArray/PracticeArrayInfoList';
+
 import './App.css'
 
 class App extends Component{
+  render(){
+    return (
+      <>
+        <Learn1 />
+      </>
+    )
+  }
+
+
   // id = 2
   // state = {
   //   information : [
@@ -84,30 +95,30 @@ class App extends Component{
 
 
 
-  state = {
-      todoList : [
-      ]
-  }
-  handleCreate = (list) => {
-    const { todoList } = this.state;
-    this.setState({
-      todoList : todoList.concat({ 
-        key : todoList.length, 
-        name : list.todo
-      })
-    })
-  }
+  // state = {
+  //     todoList : [
+  //     ]
+  // }
+  // handleCreate = (list) => {
+  //   const { todoList } = this.state;
+  //   this.setState({
+  //     todoList : todoList.concat({ 
+  //       key : todoList.length, 
+  //       name : list.todo
+  //     })
+  //   })
+  // }
 
-  render(){
-    const { todoList } = this.state;
-    return (
-      <>
-        <TodoListHeader />
-        <TodoList data={todoList}/>
-        <TodoListInert onCreate={this.handleCreate}/>
-      </>
-    );
-  }
+  // render(){
+  //   const { todoList } = this.state;
+  //   return (
+  //     <>
+  //       <TodoListHeader />
+  //       <TodoList data={todoList}/>
+  //       <TodoListInert onCreate={this.handleCreate}/>
+  //     </>
+  //   );
+  // }
 
 }
 
