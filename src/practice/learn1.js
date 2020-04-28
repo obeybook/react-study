@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { observable, reaction, computed, autorun } from 'mobx';
 
 class Learn1 extends Component{
     constructor(props){

@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
-import { autobind } from 'core-decorators';
-import { observable, action, computed, autorun, decorate } from 'mobx';
+import { observable, reaction, computed, autorun, decorate } from 'mobx';
 import { observer } from 'mobx-react';
 
-@autobind
 class Counter extends Component {
-    @observable number = 0;
+    number = 0;
 
-    @action
     plus = () => {
         this.number++;
     }
 
-    @action
-    minus = () => {
+    minus = () =>{
         this.number--;
     }
 
@@ -26,6 +22,13 @@ class Counter extends Component {
             </>
         )
     }
+
+    decorate(Counter,{
+        number : observable,
+        plus : action,
+        minus : action
+
+    })
 }
 
 export default Counter;
