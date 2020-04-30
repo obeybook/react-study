@@ -4,13 +4,15 @@ import { Provider } from 'mobx-react';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import MarketStore from './learnShop/stores/market';
 
+const market = new MarketStore();
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Provider> */}
+    <Provider market={market}>
       <App />
-    {/* </Provider> */}
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

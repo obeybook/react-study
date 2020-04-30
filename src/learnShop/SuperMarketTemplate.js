@@ -2,7 +2,6 @@ import React from 'react';
 import './css/template.css';
 
 const SuperMarketTemplate = ({items, basket}) =>{
-    console.log(items)
     return(
         <div className="Template">
             <div className="contents-wrap">
@@ -12,6 +11,7 @@ const SuperMarketTemplate = ({items, basket}) =>{
                 </div>
                 <div className="basket-wrap">
                     <h2>장바구니</h2>
+                    <div>{basket}</div>
                 </div>
             </div>
         </div>
