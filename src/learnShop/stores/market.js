@@ -18,7 +18,6 @@ export default class MarketStore {
 
     @action remove = (name) => {
         const removeData = this.selectedItems.find( data => data.name === name);
-        console.log(removeData)
         removeData.count--;
         if(removeData.count === 0){
             this.selectedItems.remove(removeData)

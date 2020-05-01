@@ -4,13 +4,13 @@ import { Provider } from 'mobx-react';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import MarketStore from './learnShop/stores/market';
+import TodoStore from './TodoList/stores/TodoStore';
 
-const market = new MarketStore();
+const TodoListStore = new TodoStore();
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider market={market}>
+    <Provider TodoListStore={TodoListStore}>
       <App />
     </Provider>
   </React.StrictMode>,

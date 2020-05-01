@@ -1,0 +1,67 @@
+.TodoWrap{ 
+    border: 1px solid #aeaeae; 
+    padding: 1rem;
+    margin: 3rem auto 0 auto;
+    border-radius: 30px;
+    width: 50rem;
+}
+
+.TodoHeader{ 
+}
+
+.TodoHeader h2{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+    color: #E91E63;
+}
+
+.TodoInsert{
+    display: flex;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.TodoInsert > input{
+    flex: 9;
+    padding: 1rem 0.4rem;
+    font-size: 2rem;
+    color: #6a6a6a;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #a9a9a9;
+}
+
+.TodoInsert > input[type='submit']{
+    flex: 1;
+    background: #ffcbdd;
+    font-size: 3rem;
+    color: #ff4485;
+    border: 0;
+    cursor: pointer;
+}
+
+.Todo{
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.Todo > div{ 
+    flex: 9;
+    padding: 1rem 0.6rem;
+    font-size: 1.2rem;
+    color:#6a6a6a;
+}
+
+.Todo > button{
+    flex: 1 1;
+    background: #b2b2b2;
+    font-size: 3rem;
+    color: #434343;
+    border: 0;
+    cursor: pointer;
+}
+
+.TodoInsert{}
