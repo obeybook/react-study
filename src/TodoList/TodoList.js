@@ -8,7 +8,7 @@ import { observer, inject } from 'mobx-react';
 class TodoList extends Component{
     render(){
         const { todoList } = this.props;
-        const todo = todoList.map( item => <TodoListItem todoList={item.todoName} key={item.todoId}/> )
+        const todo = todoList.map( item => <TodoListItem todoList={item} key={item.todoId}/> )
         return(
             <>
               {todo}
