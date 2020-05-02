@@ -46,22 +46,30 @@
     display: flex;
     width: 100%;
     margin-bottom: 1rem;
+    align-items: center;
 }
 
-.Todo > div{ 
-    flex: 9;
+.Todo > .TodoName{ 
+    flex: 8;
     padding: 1rem 0.6rem;
     font-size: 1.2rem;
     color:#6a6a6a;
 }
 
+.Todo > .TodoUpdateButton{
+    flex: 1;
+    vertical-align: middle;
+    text-align: center;
+    background: burlywood;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
 .Todo > button{
-    flex: 1 1;
+    flex: 1;
     background: #b2b2b2;
     font-size: 3rem;
     color: #434343;
     border: 0;
     cursor: pointer;
 }
-
-.TodoInsert{}

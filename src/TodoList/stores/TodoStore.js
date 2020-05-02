@@ -1,24 +1,36 @@
 import { observable, action, computed } from 'mobx';
 
 export default class TodoStore {
-    @observable todoList = [
-        {
-            aaa: 'aaa1',
-            bbb: 'bbb2'
-        }
-    ];
+    @observable todoList = [];
 
-    @observable title = "asd";
+    @observable todoInput = "";
+
+    @observable todoUpdateState = false;
+
+    id = 0;
 
     @action todoAdd = () => {
         this.todoList.push({
-            aaa : 'aaa',
-            bbb: 'bbb'
+            todoId : this.id,
+            todoName : this.todoInput 
         })
-        console.log(this.todoList)
+        this.id++;
+        this.todoInput = "";
+        this.todoUpdateState = false;
+        console.log(this.id)
     }
 
-    // @action todoOnChange = (e) => {
-    //     this.title = e.target.value;
-    // }
+    @action todoRemove = (id) => {
+        const removeData = this.todoList.find( item => item.id === id);
+        this.todoList.remove(removeData);
+        this.todoUpdateState = false;
+    }
+
+    @action todoOnChange = (e) => {
+        this.todoInput = e.target.value;
+    }
+
+    @action todoUpdate = () => {
+        this.todoUpdateState = true;
+    }
 }
